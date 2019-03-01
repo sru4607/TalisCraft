@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ApplyTransformation : MonoBehaviour {
 
-    int scaleCount;
-    bool array;
-    int rotate;
-    List<GameObject> children;
+    public int scaleCount;
+    public bool array;
+    public int rotate;
+    public List<GameObject> children;
+    public GameObject baseSprite;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,26 @@ public class ApplyTransformation : MonoBehaviour {
         rotate = 0;
         array = false;
 	}
-	
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            ScaleDown();
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            ScaleUp();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RotateObject();
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Array();
+        }
+    }
     //increase the scale of the object
     void ScaleUp()
     {
@@ -64,9 +84,43 @@ public class ApplyTransformation : MonoBehaviour {
     //Array the object and set children array and all child transformations
     void Array()
     {
+        
         if(!array)
         {
+            array = true;
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x-gameObject.GetComponent<SpriteRenderer>().sprite.rect.width/100, gameObject.transform.position.y, gameObject.transform.position.z);
+            children.Add(GameObject.Instantiate(gameObject));
+            children.Add(GameObject.Instantiate(gameObject));
+            children.Add(GameObject.Instantiate(gameObject));
+            children.Add(GameObject.Instantiate(gameObject));
+            children.Add(GameObject.Instantiate(gameObject));
 
+            for (int i = 0; i<5; i++)
+            {
+
+                children[i].GetComponent<ApplyTransformation>().children.Clear();
+                if (scaleCount < 0)
+                {
+                    for(int j = 0; j>scaleCount; j--)
+                    {
+                        children[i].GetComponent<ApplyTransformation>().ScaleDown();
+                    }
+                }
+                else if (scaleCount > 0)
+                {
+                    for (int j = 0; j < scaleCount; j++)
+                    {
+                        children[i].GetComponent<ApplyTransformation>().ScaleUp();
+                    }
+                }
+                for(int j = 0; j<rotate; j++)
+                {
+                    children[i].GetComponent<ApplyTransformation>().RotateObject();
+                }
+                children[i].transform.Rotate(new Vector3(0, 0, 1), (60 * (i + 1)),Space.Self);
+            }
+          
+            Debug.Log(array);
         }
     }
 }
