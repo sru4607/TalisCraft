@@ -12,9 +12,7 @@ public class ApplyTransformation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        scaleCount = 0;
-        rotate = 0;
-        array = false;
+       
 	}
 
     private void Update()
@@ -45,7 +43,7 @@ public class ApplyTransformation : MonoBehaviour {
             {
                 foreach (GameObject c in children)
                 {
-                    c.GetComponent<ApplyTransformation>().ScaleUp();
+                    c.GetComponent<ChildTransformation>().ScaleUp();
                 }
             }
             scaleCount++;
@@ -61,7 +59,7 @@ public class ApplyTransformation : MonoBehaviour {
             {
                 foreach (GameObject c in children)
                 {
-                    c.GetComponent<ApplyTransformation>().ScaleDown();
+                    c.GetComponent<ChildTransformation>().ScaleDown();
                 }
             }
             scaleCount--;
@@ -75,10 +73,10 @@ public class ApplyTransformation : MonoBehaviour {
         {
             foreach (GameObject c in children)
             {
-                c.GetComponent<ApplyTransformation>().RotateObject();
+                c.GetComponent<ChildTransformation>().RotateObject();
             }
         }
-        gameObject.transform.Rotate(0, 0, 90);
+        gameObject.transform.SetPositionAndRotation(gameObject.transform.position,Quaternion.Euler(0, 0, gameObject.transform.rotation.eulerAngles.z + 90));
         rotate++;
     }
     //Array the object and set children array and all child transformations
@@ -89,38 +87,35 @@ public class ApplyTransformation : MonoBehaviour {
         {
             array = true;
             gameObject.transform.position = new Vector3(gameObject.transform.position.x-gameObject.GetComponent<SpriteRenderer>().sprite.rect.width/100, gameObject.transform.position.y, gameObject.transform.position.z);
-            children.Add(GameObject.Instantiate(gameObject));
-            children.Add(GameObject.Instantiate(gameObject));
-            children.Add(GameObject.Instantiate(gameObject));
-            children.Add(GameObject.Instantiate(gameObject));
-            children.Add(GameObject.Instantiate(gameObject));
-
+            children.Add(GameObject.Instantiate(baseSprite));
+            children.Add(GameObject.Instantiate(baseSprite));
+            children.Add(GameObject.Instantiate(baseSprite));
+            children.Add(GameObject.Instantiate(baseSprite));
+            children.Add(GameObject.Instantiate(baseSprite));
             for (int i = 0; i<5; i++)
             {
-
-                children[i].GetComponent<ApplyTransformation>().children.Clear();
+                children[i].transform.position = gameObject.transform.position;
                 if (scaleCount < 0)
                 {
                     for(int j = 0; j>scaleCount; j--)
                     {
-                        children[i].GetComponent<ApplyTransformation>().ScaleDown();
+                        children[i].GetComponent<ChildTransformation>().ScaleDown();
                     }
                 }
                 else if (scaleCount > 0)
                 {
                     for (int j = 0; j < scaleCount; j++)
                     {
-                        children[i].GetComponent<ApplyTransformation>().ScaleUp();
+                        children[i].GetComponent<ChildTransformation>().ScaleUp();
                     }
                 }
                 for(int j = 0; j<rotate; j++)
                 {
-                    children[i].GetComponent<ApplyTransformation>().RotateObject();
+                    children[i].GetComponent<ChildTransformation>().RotateObject();
                 }
-                children[i].transform.Rotate(new Vector3(0, 0, 1), (60 * (i + 1)),Space.Self);
+                children[i].transform.RotateAround(new Vector3(0, 0, 0),Vector3.forward,(60 * (i + 1)));
             }
-          
-            Debug.Log(array);
-        }
+        }  
     }
+
 }

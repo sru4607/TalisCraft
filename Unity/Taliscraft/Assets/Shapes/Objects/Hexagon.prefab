@@ -9,31 +9,31 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1204051551198548}
+  m_RootGameObject: {fileID: 1271612049816868}
   m_IsPrefabAsset: 1
---- !u!1 &1204051551198548
+--- !u!1 &1271612049816868
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4185815479976900}
-  - component: {fileID: 212683213556886634}
-  - component: {fileID: 114127658720348354}
+  - component: {fileID: 4988585504890138}
+  - component: {fileID: 212307659244192540}
+  - component: {fileID: 114529143149371440}
   m_Layer: 0
-  m_Name: Diamond
+  m_Name: Hexagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4185815479976900
+--- !u!4 &4988585504890138
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1204051551198548}
+  m_GameObject: {fileID: 1271612049816868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114127658720348354
+--- !u!114 &114529143149371440
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1204051551198548}
+  m_GameObject: {fileID: 1271612049816868}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32cfad0db242f6b4890e7638ce6a2aa1, type: 3}
@@ -56,13 +56,13 @@ MonoBehaviour:
   array: 0
   rotate: 0
   children: []
-  baseSprite: {fileID: 1204051551198548}
---- !u!212 &212683213556886634
+  baseSprite: {fileID: 1874741395629206, guid: 92c329da55a843645bad2b62a29be102, type: 2}
+--- !u!212 &212307659244192540
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1204051551198548}
+  m_GameObject: {fileID: 1271612049816868}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91095598f412c62499b41a90d7bcc5cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7cb52af9458aabe4eb661c320d8ba4c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
