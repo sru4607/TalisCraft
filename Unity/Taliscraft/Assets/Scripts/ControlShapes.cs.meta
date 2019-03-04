@@ -3,7 +3,14 @@ guid: b18ab96d5dea24545954d510012fcd0e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ListTemplate: {instanceID: 0}
+  - activeShape: {instanceID: 0}
+  - TriangleTemplate: {fileID: 1465171379450918, guid: f48cf27c1abaeed4997758f8bc136d92,
+      type: 2}
+  - CircleTemplate: {instanceID: 0}
+  - DiamondTemplate: {instanceID: 0}
+  - HexagonTemplate: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
