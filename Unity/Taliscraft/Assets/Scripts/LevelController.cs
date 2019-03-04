@@ -5,7 +5,8 @@ using UnityEngine;
 public class LevelController : MonoBehaviour {
 
     public int levelCount;
-    public List<GameObject> GameObjects;
+    public List<GameObject> AllShapes;
+    public GameObject GameWin;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +18,10 @@ public class LevelController : MonoBehaviour {
         {
             case 1:
             {
+                if(CheckSolutionLevel1())
+                {
+                    BeatLevel();
+                }
                 break;
             }
             default:
@@ -25,4 +30,16 @@ public class LevelController : MonoBehaviour {
             }
         }
 	}
+
+    bool CheckSolutionLevel1()
+    {
+
+        return true;
+    }
+
+    void BeatLevel()
+    {
+
+        
+    }
 }

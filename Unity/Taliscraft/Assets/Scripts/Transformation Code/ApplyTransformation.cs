@@ -17,25 +17,25 @@ public class ApplyTransformation : MonoBehaviour {
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.D))
-        {
-            ScaleDown();
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            ScaleUp();
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            RotateObject();
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Array();
-        }
+        //if(Input.GetKeyDown(KeyCode.D))
+        //{
+        //    ScaleDown();
+        //}
+        //if (Input.GetKeyDown(KeyCode.U))
+        //{
+        //    ScaleUp();
+        //}
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    RotateObject();
+        //}
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    Array();
+        //}
     }
     //increase the scale of the object
-    void ScaleUp()
+    public void ScaleUp()
     {
         if (scaleCount < 3)
         {
@@ -51,7 +51,7 @@ public class ApplyTransformation : MonoBehaviour {
         }
     }
     //decrease the scale of the object
-    void ScaleDown()
+    public void ScaleDown()
     {
         if (scaleCount > -3)
         {
@@ -67,7 +67,7 @@ public class ApplyTransformation : MonoBehaviour {
         }
     }
     //decrease the scale of the object
-    void RotateObject()
+    public void RotateObject()
     {
         if (array)
         {
@@ -80,7 +80,7 @@ public class ApplyTransformation : MonoBehaviour {
         rotate++;
     }
     //Array the object and set children array and all child transformations
-    void Array()
+    public void Array()
     {
         
         if(!array)
