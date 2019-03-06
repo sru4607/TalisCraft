@@ -5,8 +5,13 @@ using UnityEngine.EventSystems;
 
 public class ControlShapes : MonoBehaviour {
     // Use this for initialization
-    List<GameObject> Shapes;
-	void Start () {
+    public List<GameObject> Shapes;
+    public List<GameObject> solution;
+    public Sprite circleSprite;
+    public Sprite triangleSprite;
+    public Sprite hexagonSprite;
+    public Sprite diamondSprite;
+    void Start () {
 
     }
 	
@@ -99,19 +104,50 @@ public class ControlShapes : MonoBehaviour {
 
     public bool CheckWin()
     {
-        bool win = false;
         
-
-
-        if (win)
+        for(int i = 0; i<solution.Count; i++)
         {
-            Debug.Log("Win");
-            return true;
+            bool exists = false;
+            Sprite spriteT = solution[i].GetComponent<SpriteRenderer>().sprite;
+            int scale = solution[i].GetComponent<ApplyTransformation>().scaleCount;
+            int rotation = solution[i].GetComponent<ApplyTransformation>().rotate;
+            bool array = solution[i].GetComponent<ApplyTransformation>().array;
+            for(int j = 0; j < Shapes.Count; j++)
+            {
+                Sprite spriteC = Shapes[j].GetComponent<SpriteRenderer>().sprite;
+                int rotationC = Shapes[j].GetComponent<ApplyTransformation>().rotate;
+                if (spriteC == circleSprite)
+                {
+                    rotation %= 1;
+                }
+                if (spriteC == hexagonSprite)
+                {
+                    rotation %= 1;
+                }
+                if (spriteC == diamondSprite)
+                {
+                    rotation %= 1;
+                }
+                if (spriteC == triangleSprite)
+                {
+                    rotation %= 4;
+                }
+                int scaleC = Shapes[j].GetComponent<ApplyTransformation>().scaleCount;
+                
+                bool arrayC = Shapes[j].GetComponent<ApplyTransformation>().array;
+                if(spriteC == spriteT && scaleC == scale && rotationC == rotation && array == arrayC)
+                {
+                    exists = true;
+                    Debug.Log("Match");
+                }
+
+            }
+            if(exists == false)
+            {
+                return false;
+            }
         }
-        else
-        {
-            Debug.Log("Not Win");
-            return false;
-        }
+        Debug.Log("Win");
+        return true;
     }
 }

@@ -9,7 +9,7 @@ public class ApplyTransformation : MonoBehaviour {
     public int rotate;
     public List<GameObject> children;
     public GameObject baseSprite;
-
+    const int maxScale = 5;
 	// Use this for initialization
 	void Start () {
        
@@ -37,7 +37,7 @@ public class ApplyTransformation : MonoBehaviour {
     //increase the scale of the object
     public void ScaleUp()
     {
-        if (scaleCount < 3)
+        if (scaleCount < maxScale)
         {
             if (array)
             {
@@ -53,7 +53,7 @@ public class ApplyTransformation : MonoBehaviour {
     //decrease the scale of the object
     public void ScaleDown()
     {
-        if (scaleCount > -3)
+        if (scaleCount > -maxScale)
         {
             if (array)
             {
