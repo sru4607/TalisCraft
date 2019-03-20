@@ -11,7 +11,7 @@ public class MenuControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -22,6 +22,6 @@ public class MenuControl : MonoBehaviour
 
     public void GameStart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Level1", LoadSceneMode.Additive);
     }
 }
