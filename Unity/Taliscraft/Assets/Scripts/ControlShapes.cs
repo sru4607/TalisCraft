@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class ControlShapes : MonoBehaviour {
     // Use this for initialization
@@ -11,6 +12,7 @@ public class ControlShapes : MonoBehaviour {
     public Sprite triangleSprite;
     public Sprite hexagonSprite;
     public Sprite diamondSprite;
+    public GameObject levelComplete;
     void Start () {
 
     }
@@ -102,6 +104,21 @@ public class ControlShapes : MonoBehaviour {
         Debug.Log("Pasued");
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Next()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+
     public bool CheckWin()
     {
         
@@ -148,6 +165,7 @@ public class ControlShapes : MonoBehaviour {
             }
         }
         Debug.Log("Win");
+        levelComplete.active = true;
         return true;
     }
 }
