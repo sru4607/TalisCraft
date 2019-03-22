@@ -13,7 +13,7 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public Outline outline;
     public ButtonType buttonType;
     public bool isHovering;
-
+    public Color shape, transformation, menu;
     private void Start()
     {
         outline = GetComponent<Outline>();
@@ -33,10 +33,13 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         switch (buttonType)
         {
             case ButtonType.shape: //shape button
-                outline.effectColor = Color.red;
+                outline.effectColor = new Color(1.0f, 0.64f, 0f);
                 break;
             case ButtonType.transformation: //transformation button
                 outline.effectColor = Color.green;
+                break;
+            case ButtonType.none:
+                outline.effectColor = Color.magenta;
                 break;
         }
     }
