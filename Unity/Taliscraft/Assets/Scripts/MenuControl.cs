@@ -41,7 +41,7 @@ public class MenuControl : MonoBehaviour
         index++;
         if(index == items.Count-1)
         {
-            TextObj.GetComponent<Text>().text = "Menu";
+            TextObj.GetComponent<Text>().text = "MENU";
         }
         if(index == items.Count)
         {

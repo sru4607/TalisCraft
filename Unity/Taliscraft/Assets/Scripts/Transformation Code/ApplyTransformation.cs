@@ -47,6 +47,7 @@ public class ApplyTransformation : MonoBehaviour {
                 foreach (GameObject c in children)
                 {
                     c.GetComponent<ChildTransformation>().ScaleUp();
+                    c.GetComponent<SpriteRenderer>().color = shapeColors[scaleCount + 6];
                 }
             }
             scaleCount++;
@@ -64,6 +65,7 @@ public class ApplyTransformation : MonoBehaviour {
                 foreach (GameObject c in children)
                 {
                     c.GetComponent<ChildTransformation>().ScaleDown();
+                    c.GetComponent<SpriteRenderer>().color = shapeColors[scaleCount + 4];
                 }
             }
             scaleCount--;
@@ -120,6 +122,7 @@ public class ApplyTransformation : MonoBehaviour {
                     children[i].GetComponent<ChildTransformation>().RotateObject();
                 }
                 children[i].transform.RotateAround(new Vector3(0, 0, 0),Vector3.forward,(60 * (i + 1)));
+                children[i].GetComponent<SpriteRenderer>().color = shapeColors[scaleCount + 5];
             }
         }  
     }

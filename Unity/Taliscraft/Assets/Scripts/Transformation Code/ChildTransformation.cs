@@ -10,6 +10,7 @@ public class ChildTransformation : MonoBehaviour {
     {
         gameObject.transform.localScale += new Vector3(0.1f, 0.1f, 0);
 
+
     }
     //decrease the scale of the object
     public void ScaleDown()

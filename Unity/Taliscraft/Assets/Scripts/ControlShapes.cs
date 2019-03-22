@@ -170,7 +170,7 @@ public class ControlShapes : MonoBehaviour {
             }
         }
         Debug.Log("Win");
-        levelComplete.active = true;
+        levelComplete.SetActive(true);
         return true;
     }
 }
