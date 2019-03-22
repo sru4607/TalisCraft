@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+/// <summary>
+/// Written By Kesavan Shanmugasundaram
+/// Instantiates the correct target based off the current level
+/// Must add additional levels to canvas prefab
+/// </summary>
 public class InstantiateGoal : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -21,14 +26,24 @@ public class InstantiateGoal : MonoBehaviour
     {
         
     }
+    /// <summary>
+    /// Spawns the target
+    /// </summary>
+    /// <param name="currentLevel"></param>
+    /// <returns></returns>
     public GameObject SpawnGoal(int currentLevel)
     {
-        GameObject goal = Instantiate(levels[currentLevel], transform.position, Quaternion.identity);
+        GameObject goal = Instantiate(levels[currentLevel], new Vector3(transform.position.x, transform.position.y, -1f), Quaternion.identity);
         goal.transform.parent = gameObject.transform;
         goal.name = levels[currentLevel].gameObject.name;
         return goal;
 
     }
+    /// <summary>
+    /// Extracts level number from scene name
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
     public int GetLevelNumber(string name)
     {
         string x = "";
