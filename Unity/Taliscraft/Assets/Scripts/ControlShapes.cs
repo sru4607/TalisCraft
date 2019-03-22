@@ -31,24 +31,28 @@ public class ControlShapes : MonoBehaviour {
     public void SpawnCircle()
     {
         activeShape = Instantiate(CircleTemplate);
+        activeShape.GetComponent<SpriteRenderer>().color = Color.black;
         AddToList();
     }
 
     public void SpawnTriangle()
     {
         activeShape = Instantiate(TriangleTemplate);
+        activeShape.GetComponent<SpriteRenderer>().color = Color.black;
         AddToList();
     }
 
     public void SpawnDiamond()
     {
         activeShape = Instantiate(DiamondTemplate);
+        activeShape.GetComponent<SpriteRenderer>().color = Color.black;
         AddToList();
     }
 
     public void SpawnHexagon()
     {
         activeShape = Instantiate(HexagonTemplate);
+        activeShape.GetComponent<SpriteRenderer>().color = Color.black;
         AddToList();
     }
 
@@ -70,6 +74,7 @@ public class ControlShapes : MonoBehaviour {
             activeShape.GetComponent<ApplyTransformation>().ScaleUp();
             CheckWin();
         }
+        
     }
 
     public void ScaleDownShape()

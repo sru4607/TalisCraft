@@ -10,8 +10,11 @@ public class ApplyTransformation : MonoBehaviour {
     public List<GameObject> children;
     public GameObject baseSprite;
     const int maxScale = 5;
-	// Use this for initialization
-	void Start () {
+
+    public Color32[] shapeColors = { new Color32(200, 191, 231, 255), new Color32(187, 125, 255, 255), new Color32(163, 73, 164, 255), new Color32(1, 121, 231, 255),
+        new Color32(0, 0, 160, 255), new Color32(0, 0, 0, 255), new Color32(136, 0, 21, 255), new Color32(237, 28, 36, 255), new Color32(255, 127, 39, 255), new Color32(255, 201, 14, 255), new Color32(255, 242, 0, 255) };
+    // Use this for initialization
+    void Start () {
        
 	}
 
@@ -48,6 +51,7 @@ public class ApplyTransformation : MonoBehaviour {
             }
             scaleCount++;
             gameObject.transform.localScale += new Vector3(0.1f, 0.1f, 0);
+            gameObject.GetComponent<SpriteRenderer>().color = shapeColors[scaleCount + 5];
         }
     }
     //decrease the scale of the object
@@ -64,7 +68,9 @@ public class ApplyTransformation : MonoBehaviour {
             }
             scaleCount--;
             gameObject.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
+            gameObject.GetComponent<SpriteRenderer>().color = shapeColors[scaleCount + 5];
         }
+
     }
     //decrease the scale of the object
     public void RotateObject()
