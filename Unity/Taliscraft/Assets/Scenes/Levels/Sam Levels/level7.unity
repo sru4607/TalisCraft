@@ -122,7 +122,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button (5)
+      value: Downsize
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -430,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button (4)
+      value: Rotate
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -751,7 +751,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button (1)
+      value: Reset
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -956,7 +956,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level: 4
+  m_Text: 'Level: 1
 
 '
 --- !u!222 &943436871
@@ -1075,7 +1075,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button (2)
+      value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -1352,7 +1352,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button (8)
+      value: Diamond
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -1473,7 +1473,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625035, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SpawnTriangle
+      value: SpawnDiamond
       objectReference: {fileID: 0}
     - target: {fileID: 1404090212949085302, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -1651,7 +1651,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button (9)
+      value: Triangle
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -1791,7 +1791,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button (6)
+      value: SizeUp
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -2016,7 +2016,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button (7)
+      value: Hexagon
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -2234,7 +2234,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button (3)
+      value: Array
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -2379,7 +2379,7 @@ PrefabInstance:
     - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Circle
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -2495,6 +2495,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SpawnCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500713571785828128, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_EffectColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500713571785828128, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_EffectColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500713571785828128, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_EffectColor.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72ff0514632de4d48a1e8f55c2696f4d, type: 3}

@@ -13,8 +13,10 @@ public class ControlShapes : MonoBehaviour {
     public Sprite hexagonSprite;
     public Sprite diamondSprite;
     public GameObject levelComplete;
+    public GameObject pause;
     void Start () {
-
+        pause.GetComponent<Canvas>().worldCamera = Camera.main;
+        pause.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -106,7 +108,8 @@ public class ControlShapes : MonoBehaviour {
 
     public void Pause()
     {
-        Debug.Log("Pasued");
+        pause.SetActive(true);
+        gameObject.GetComponent<AudioSource>().Pause();
     }
 
     public void Menu()
@@ -123,10 +126,17 @@ public class ControlShapes : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
-
+    public void Resume()
+    {
+        pause.SetActive(false);
+        gameObject.GetComponent<AudioSource>().UnPause();
+    }
     public bool CheckWin()
     {
-        
+        if(Shapes.Count != solution.Count)
+        {
+            return false;
+        }
         for(int i = 0; i<solution.Count; i++)
         {
             bool exists = false;
@@ -140,19 +150,19 @@ public class ControlShapes : MonoBehaviour {
                 int rotationC = Shapes[j].GetComponent<ApplyTransformation>().rotate;
                 if (spriteC == circleSprite)
                 {
-                    rotation %= 1;
+                    rotationC %= 1;
                 }
                 if (spriteC == hexagonSprite)
                 {
-                    rotation %= 1;
+                    rotationC %= 2;
                 }
                 if (spriteC == diamondSprite)
                 {
-                    rotation %= 1;
+                    rotationC %= 1;
                 }
                 if (spriteC == triangleSprite)
                 {
-                    rotation %= 4;
+                    rotationC %= 4;
                 }
                 int scaleC = Shapes[j].GetComponent<ApplyTransformation>().scaleCount;
                 
@@ -160,16 +170,15 @@ public class ControlShapes : MonoBehaviour {
                 if(spriteC == spriteT && scaleC == scale && rotationC == rotation && array == arrayC)
                 {
                     exists = true;
-                    Debug.Log("Match");
                 }
 
             }
             if(exists == false)
             {
+
                 return false;
             }
         }
-        Debug.Log("Win");
         levelComplete.SetActive(true);
         return true;
     }
