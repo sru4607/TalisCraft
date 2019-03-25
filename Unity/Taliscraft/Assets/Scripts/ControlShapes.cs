@@ -14,9 +14,13 @@ public class ControlShapes : MonoBehaviour {
     public Sprite diamondSprite;
     public GameObject levelComplete;
     public GameObject pause;
+    public AudioClip clickSound;
+    public AudioSource audioSource;
     void Start () {
+        audioSource = GetComponent<AudioSource>();
         pause.GetComponent<Canvas>().worldCamera = Camera.main;
         pause.SetActive(false);
+        
     }
 	
 	// Update is called once per frame
@@ -60,6 +64,8 @@ public class ControlShapes : MonoBehaviour {
 
     public void AddToList()
     {
+        
+        audioSource.PlayOneShot(clickSound);
         Shapes.Add(activeShape);
         CheckWin();
     }
@@ -73,6 +79,7 @@ public class ControlShapes : MonoBehaviour {
     {
         if (activeShape.GetComponent<ApplyTransformation>() != null)
         {
+            audioSource.PlayOneShot(clickSound);
             activeShape.GetComponent<ApplyTransformation>().ScaleUp();
             CheckWin();
         }
@@ -83,6 +90,7 @@ public class ControlShapes : MonoBehaviour {
     {
         if (activeShape.GetComponent<ApplyTransformation>() != null)
         {
+            audioSource.PlayOneShot(clickSound);
             activeShape.GetComponent<ApplyTransformation>().ScaleDown();
             CheckWin();
         }
@@ -92,6 +100,7 @@ public class ControlShapes : MonoBehaviour {
     {
         if (activeShape.GetComponent<ApplyTransformation>() != null)
         {
+            audioSource.PlayOneShot(clickSound);
             activeShape.GetComponent<ApplyTransformation>().RotateObject();
             CheckWin();
         }
@@ -101,6 +110,7 @@ public class ControlShapes : MonoBehaviour {
     {
         if (activeShape.GetComponent<ApplyTransformation>() != null)
         {
+            audioSource.PlayOneShot(clickSound);
             activeShape.GetComponent<ApplyTransformation>().Array();
             CheckWin();
         }
@@ -119,15 +129,18 @@ public class ControlShapes : MonoBehaviour {
 
     public void Retry()
     {
+        audioSource.PlayOneShot(clickSound);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Next()
     {
+        audioSource.PlayOneShot(clickSound);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     public void Resume()
     {
+        audioSource.PlayOneShot(clickSound);
         pause.SetActive(false);
         gameObject.GetComponent<AudioSource>().UnPause();
     }

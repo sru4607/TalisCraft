@@ -14,11 +14,14 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public ButtonType buttonType;
     public bool isHovering;
     public Color shape, transformation, menu;
+    public AudioClip hoverEffect;
+    public AudioSource audioSource;
     private void Start()
     {
         outline = GetComponent<Outline>();
         outline.effectColor = Color.white;
         buttonType = GetComponent<ButtonProperties>().buttonType;
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -30,6 +33,7 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     /// <param name="data"></param>
     public void OnPointerEnter(PointerEventData data)
     {
+        audioSource.PlayOneShot(hoverEffect);
         switch (buttonType)
         {
             case ButtonType.shape: //shape button
