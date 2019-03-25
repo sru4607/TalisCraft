@@ -119,11 +119,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -228,6 +223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button (5)
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625034, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -439,11 +439,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -548,6 +543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button (4)
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625034, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -766,7 +766,7 @@ PrefabInstance:
     - target: {fileID: 6380427777820188388, guid: 1515247bea59c3944834965f1d357ada,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6380427777820188388, guid: 1515247bea59c3944834965f1d357ada,
         type: 3}
@@ -982,11 +982,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1091,6 +1086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625034, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -1613,11 +1613,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1723,6 +1718,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625034, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Sprite
@@ -1770,11 +1770,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1879,6 +1874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button (8)
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625034, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -2161,11 +2161,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2270,6 +2265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button (9)
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625034, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -2513,11 +2513,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2622,6 +2617,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button (6)
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625034, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -2922,11 +2922,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3031,6 +3026,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button (7)
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625034, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
@@ -3232,11 +3232,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3342,6 +3337,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625034, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_Sprite
@@ -3377,11 +3377,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 294781841}
     m_Modifications:
-    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
-        type: 3}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625032, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3486,6 +3481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319446542992625033, guid: 72ff0514632de4d48a1e8f55c2696f4d,
+        type: 3}
+      propertyPath: m_Name
+      value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 7319446542992625035, guid: 72ff0514632de4d48a1e8f55c2696f4d,
         type: 3}

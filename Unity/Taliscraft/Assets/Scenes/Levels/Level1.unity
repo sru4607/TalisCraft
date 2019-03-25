@@ -659,20 +659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Controller
       objectReference: {fileID: 0}
-    - target: {fileID: 1326312191109974259, guid: 1515247bea59c3944834965f1d357ada,
-        type: 3}
-      propertyPath: m_Name
-      value: PauseScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424682501443136583, guid: 1515247bea59c3944834965f1d357ada,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6380427777820188388, guid: 1515247bea59c3944834965f1d357ada,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6380427777820188388, guid: 1515247bea59c3944834965f1d357ada,
         type: 3}
@@ -726,34 +716,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6380427777820188391, guid: 1515247bea59c3944834965f1d357ada,
         type: 3}
-      propertyPath: solution.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6380427777820188391, guid: 1515247bea59c3944834965f1d357ada,
-        type: 3}
       propertyPath: solution.Array.data[0]
       value: 
       objectReference: {fileID: 1235192544}
-    - target: {fileID: 6380427777820188391, guid: 1515247bea59c3944834965f1d357ada,
-        type: 3}
-      propertyPath: solution.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6380427777820188391, guid: 1515247bea59c3944834965f1d357ada,
-        type: 3}
-      propertyPath: clickSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a2f360ffcb4b79147a2f0f3a371c2d73, type: 3}
-    - target: {fileID: 6380427777293513450, guid: 1515247bea59c3944834965f1d357ada,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6380427777820188390, guid: 1515247bea59c3944834965f1d357ada,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 60c847c915efed84d8b19b31bb68bb5b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1515247bea59c3944834965f1d357ada, type: 3}
 --- !u!1001 &798344610

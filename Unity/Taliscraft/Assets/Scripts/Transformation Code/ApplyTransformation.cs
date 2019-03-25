@@ -88,18 +88,25 @@ public class ApplyTransformation : MonoBehaviour {
         rotate++;
     }
     //Array the object and set children array and all child transformations
-    public void Array()
+    public void Array(GameObject parent)
     {
         
         if(!array)
         {
             array = true;
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x-gameObject.GetComponent<SpriteRenderer>().sprite.rect.width/100, gameObject.transform.position.y, gameObject.transform.position.z);
-            children.Add(GameObject.Instantiate(baseSprite));
-            children.Add(GameObject.Instantiate(baseSprite));
-            children.Add(GameObject.Instantiate(baseSprite));
-            children.Add(GameObject.Instantiate(baseSprite));
-            children.Add(GameObject.Instantiate(baseSprite));
+            if(parent.transform.localScale.x == 1)
+            {
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x - gameObject.GetComponent<SpriteRenderer>().sprite.rect.width / 100, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
+            else
+            {
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x - gameObject.GetComponent<SpriteRenderer>().sprite.rect.width / 200, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
+            children.Add(GameObject.Instantiate(baseSprite, parent.transform));
+            children.Add(GameObject.Instantiate(baseSprite, parent.transform));
+            children.Add(GameObject.Instantiate(baseSprite, parent.transform));
+            children.Add(GameObject.Instantiate(baseSprite, parent.transform));
+            children.Add(GameObject.Instantiate(baseSprite, parent.transform));
             for (int i = 0; i<5; i++)
             {
                 children[i].transform.position = gameObject.transform.position;

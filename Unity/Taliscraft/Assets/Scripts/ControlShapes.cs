@@ -16,9 +16,11 @@ public class ControlShapes : MonoBehaviour {
     public GameObject pause;
     public AudioClip clickSound;
     public AudioSource audioSource;
+    public GameObject parent;
     void Start () {
         audioSource = GetComponent<AudioSource>();
         pause.GetComponent<Canvas>().worldCamera = Camera.main;
+        pause.GetComponent<Canvas>().planeDistance = 5;
         pause.SetActive(false);
         
     }
@@ -36,28 +38,28 @@ public class ControlShapes : MonoBehaviour {
     public GameObject HexagonTemplate;
     public void SpawnCircle()
     {
-        activeShape = Instantiate(CircleTemplate);
+        activeShape = Instantiate(CircleTemplate,parent.transform);
         activeShape.GetComponent<SpriteRenderer>().color = Color.black;
         AddToList();
     }
 
     public void SpawnTriangle()
     {
-        activeShape = Instantiate(TriangleTemplate);
+        activeShape = Instantiate(TriangleTemplate, parent.transform);
         activeShape.GetComponent<SpriteRenderer>().color = Color.black;
         AddToList();
     }
 
     public void SpawnDiamond()
     {
-        activeShape = Instantiate(DiamondTemplate);
+        activeShape = Instantiate(DiamondTemplate, parent.transform);
         activeShape.GetComponent<SpriteRenderer>().color = Color.black;
         AddToList();
     }
 
     public void SpawnHexagon()
     {
-        activeShape = Instantiate(HexagonTemplate);
+        activeShape = Instantiate(HexagonTemplate, parent.transform);
         activeShape.GetComponent<SpriteRenderer>().color = Color.black;
         AddToList();
     }
@@ -111,8 +113,9 @@ public class ControlShapes : MonoBehaviour {
         if (activeShape.GetComponent<ApplyTransformation>() != null)
         {
             audioSource.PlayOneShot(clickSound);
-            activeShape.GetComponent<ApplyTransformation>().Array();
+            activeShape.GetComponent<ApplyTransformation>().Array(parent);
             CheckWin();
+            parent.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         }
     }
 
