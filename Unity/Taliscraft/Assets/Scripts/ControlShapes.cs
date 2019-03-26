@@ -18,6 +18,7 @@ public class ControlShapes : MonoBehaviour {
     public AudioClip victorySound;
     public AudioSource audioSource;
     public GameObject parent;
+    public GameObject fireWorks;
     void Start () {
         audioSource = GetComponent<AudioSource>();
         pause.GetComponent<Canvas>().worldCamera = Camera.main;
@@ -197,6 +198,7 @@ public class ControlShapes : MonoBehaviour {
             }
         }
         audioSource.PlayOneShot(victorySound);
+        GameObject fw = Instantiate(fireWorks, Vector3.zero, Quaternion.identity);
         levelComplete.SetActive(true);
         return true;
     }
