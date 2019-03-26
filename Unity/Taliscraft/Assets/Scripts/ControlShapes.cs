@@ -15,6 +15,7 @@ public class ControlShapes : MonoBehaviour {
     public GameObject levelComplete;
     public GameObject pause;
     public AudioClip clickSound;
+    public AudioClip victorySound;
     public AudioSource audioSource;
     public GameObject parent;
     void Start () {
@@ -195,6 +196,7 @@ public class ControlShapes : MonoBehaviour {
                 return false;
             }
         }
+        audioSource.PlayOneShot(victorySound);
         levelComplete.SetActive(true);
         return true;
     }
