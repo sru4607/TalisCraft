@@ -44,10 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Sam Levels/level7.unity
     guid: bfb3efe7ada03494d85755b52d2f75c9
-  - enabled: 1
-    path: Assets/Scenes/Levels/Sam Levels/Level8.unity
-    guid: cd762a31b204f394e83ff878c26f4fde
-  - enabled: 1
-    path: Assets/Scenes/Levels/Sam Levels/Level9.unity
-    guid: 76a9ef46bf6a9eb4e837a5910ba895bc
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

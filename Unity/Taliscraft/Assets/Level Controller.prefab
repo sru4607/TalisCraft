@@ -521,7 +521,7 @@ MonoBehaviour:
   pause: {fileID: 1326312191109974259}
   clickSound: {fileID: 8300000, guid: a2f360ffcb4b79147a2f0f3a371c2d73, type: 3}
   victorySound: {fileID: 8300000, guid: 5586e49dc45e5fe4f9a86d5ed68842c9, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 6380427777820188390}
   parent: {fileID: 6552714161915469146}
   fireWorks: {fileID: 258120840298341770, guid: 6e8dc00d11ce1624bbe14141de34637d,
     type: 3}
